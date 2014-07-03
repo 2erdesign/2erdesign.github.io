@@ -1,0 +1,442 @@
+@base: black;
+@glow: #ffffbe;
+@vw: 0.1047120418848168;
+
+@font-face {
+    font-family: pressstart;
+    src: url(PressStart2P.ttf);
+}
+
+html {
+	padding: 0;
+	margin: 0;
+	min-width: 1020px;
+	width: auto !important;
+	min-height: 768px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 4000px;
+	overflow-x: hidden;
+	background: url('Images/background.png') repeat;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+header {
+	text-align: center;
+
+	width: 100vw;
+	height: 214px;
+}
+
+nav {
+	position: fixed;
+
+	margin-left: 30vw;
+	text-align: center;
+	z-index: 99;
+}
+
+ul {
+	margin: 0 auto;
+	padding: 0;
+	display: table-cell;
+	z-index: 99;
+}
+
+li {
+	color: white;
+	font-family: pressstart;
+	padding: 0 10px;
+	display: table-cell;
+	list-style: none;
+	text-shadow: -1px 1px 2px @glow;
+	vertical-align: middle;
+	z-index: 99;
+}
+
+#logo {
+	z-index: 98;
+}
+
+#screen {
+	margin: 0 auto;
+	width: 65vw;
+}
+
+#main {
+	font-family: pressstart;
+	color: #da3838;
+	font-size: 3em;
+}
+
+#secondary {
+	font-family: pressstart;
+	color: white;
+	margin-left: 8vw;
+	font-size: 1.2em;
+	line-height: 1.2;
+}
+
+#start {
+	font-family: pressstart;
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 1.2;
+	margin-top: 10vh;
+	opacity: 1;
+}
+
+#arcade {
+	min-width: 1020px;
+	width: auto !important;
+	margin: 0;
+}
+
+#top {
+	position: absolute;
+	background: url("Images/Machine/top.png");
+	background-repeat: no-repeat;
+	top: 100vh - 32.14659685863874vh;
+	width: 100vw;
+	height: 32.14659685863874vh;
+	margin: 0;
+	z-index: 1;
+}
+
+#stick {
+	position: absolute;
+	background: url("Images/Machine/Joystick.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100vw * 0.1057291666666667;
+	height: 100vh * 0.3151832460732984;
+	min-width: 170px;
+	top: 62vh;
+	left: 13vw;
+	z-index: 3;
+}
+
+#greenbutton {
+	position: absolute;
+	background: url("Images/Machine/greenbutton.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100vw * 0.0848958333333333;
+	min-width: 120px;
+	height: 100vh * 0.0858638743455497;
+	top: 82vh;
+	left: 83vw;
+	z-index: 3;
+}
+
+#greenbutton:hover {
+	height: 100vh * 0.0806282722513089;
+	top: 82.52356020942408vh;
+	background: url("Images/Machine/greenbuttondown.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#redbutton {
+	position: absolute;
+	background: url("Images/Machine/redbutton.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100vw * 0.0848958333333333;
+	min-width: 120px;
+	height: 100vh * 0.0858638743455497;
+	top: 87vh;
+	left: 72vw;
+	z-index: 3;
+}
+
+#redbutton:hover {
+	height: 100vh * 0.0806282722513089;
+	top: 87.52356020942408vh;
+	background: url("Images/Machine/redbuttondown.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#paper {
+	position: absolute;
+	background: url("Images/Machine/paper.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 100vh * 0.1759162303664921;
+	width: 100vw * 0.2;
+	min-width: 350px;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top: 80vh;
+    z-index: 3;
+}
+
+#ship {
+	position: absolute;
+	background: url("Images/Machine/ship.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	width: 101px;
+	min-width: 75px;
+	max-height: 60px;
+	height: 60px;
+	top: 3vh;
+	left: 110vw;
+	z-index: 2;
+}
+
+#laser {
+	position: absolute;
+	background: url("Images/Machine/laser.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	width: 36vw;
+	height: 100vh * 0.0335078534031414;
+	left: 54.2vw;
+	top: 6.6vh;
+	opacity: 0;
+	z-index: 2;
+}
+
+#vivi {
+	position: absolute;
+	background: url("Images/Machine/vivi.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 50;
+	min-width: 80px;
+	height: 100vh * 0.0900523560209424;
+	top: 67.85340314136126vh - 8.5vh;
+	left: 8vw;
+	z-index: 2;
+}
+
+#link {
+	position: absolute;
+	background: url("Images/Machine/link.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100vw * 0.0849214659685864;
+	min-width: 56px;
+	height: 100vh * 0.0601041666666667;
+	top: 67.85340314136126vh + 5vh;
+	left: 40vw;
+	z-index: 2;
+}
+
+#invader {
+	position: absolute;
+	background: url("Images/Machine/invader.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100vw * 0.0649214659685864;
+	min-width: 56px;
+	height: 100vh * 0.0401041666666667;
+	top: 67.85340314136126vh + 21vh;
+	left: 58vw;
+	z-index: 2;
+}
+
+#case {
+	position: absolute;
+	width: 100vw;
+	height: 2907px;
+	background: url("Images/Machine/base.png");
+	top: 100vh;
+}
+
+#bandaid {
+	position: absolute;
+	background: url("Images/Machine/bandaid.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	right: 0;
+	height: 100vh * 0.3371727748691099;
+	width: 100vw * 0.1322916666666667;
+	top: 2700px;
+	z-index: 6;
+}
+
+#leftwheel {
+	position: absolute;
+	background: url("Images/Machine/leftwheel.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100vw * 0.0526041666666667;
+	height: 100vh * 0.1507853403141361;
+	min-width: 101px;
+	top: 2907px + 860px;
+	left: 5vw;
+	z-index: 5;
+}
+
+#rightwheel {
+	position: absolute;
+	background: url("Images/Machine/rightwheel.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100vw * 0.0598958333333333;
+	height: 100vh * 0.1507853403141361;
+	min-width: 101px;
+	top: 2907px + 860px;
+	left: 90vw;
+	z-index: 5;
+}
+
+#mouse {
+	position: absolute;
+	background: url("Images/Machine/mouse.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100vw * 0.0447916666666667;
+	height: 100vh * 0.0303664921465969;
+	min-width: 80px;
+	top: 2907px + 870px;
+	left: 15vw;
+	z-index: 4;
+}
+
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.attack {
+    -webkit-animation-name: attacker;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-name: attacker;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-fill-mode: forwards;
+
+    animation-name: attacker;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards
+}
+
+@-moz-keyframes attacker {  
+    0% { left: 110vw; }
+    50% { left: 90vw; }
+    100% { left: 90vw; }
+}
+
+@-webkit-keyframes attacker {  
+    0% { left: 110vw; }
+    50% { left: 90vw; }
+    100% { left: 90vw; }
+}
+
+@keyframes attacker {  
+    0% { left: 110vw; }
+    50% { left: 90vw; }
+    100% { left: 90vw; }
+}
+
+.laser {
+-webkit-animation-name: shoot;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-name: shoot;
+    -moz-animation-duration: 2.5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-fill-mode: forwards;
+
+    animation-name: shoot;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards
+}
+
+@-moz-keyframes shoot {  
+    0%  { opacity: 0; }
+    50% { opacity: 0; }
+    51% { opacity: 1; }
+    55% { opacity: 0; }
+    57% { opacity: 1; }
+    63% { opacity: 0; }
+    65% { opacity: 1; }
+    70% { opacity: 0; }
+    72% { opacity: 1; }
+    78% { opacity: 0; }
+    79% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes shoot {  
+    0%  { opacity: 0; }
+    50% { opacity: 0; }
+    51% { opacity: 1; }
+    55% { opacity: 0; }
+    57% { opacity: 1; }
+    63% { opacity: 0; }
+    65% { opacity: 1; }
+    70% { opacity: 0; }
+    72% { opacity: 1; }
+    78% { opacity: 0; }
+    79% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes shoot {  
+    0%  { opacity: 0; }
+    50% { opacity: 0; }
+    51% { opacity: 1; }
+    55% { opacity: 0; }
+    57% { opacity: 1; }
+    63% { opacity: 0; }
+    65% { opacity: 1; }
+    70% { opacity: 0; }
+    72% { opacity: 1; }
+    78% { opacity: 0; }
+    79% { opacity: 1; }
+    100% { opacity: 1; }
+}
